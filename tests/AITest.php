@@ -17,4 +17,11 @@ final class AITest extends TestCase
         $expected_result = 'Female';
         $this->assertEquals($expected_result, $result);
     }
+
+    public function testLanguages_TH()
+    {
+        $result = AI::getLanguages('สวัสดีค่ะ');
+        $expected_result = 'TH';
+        $this->assertEquals($expected_result, $result);
+    }
 }
