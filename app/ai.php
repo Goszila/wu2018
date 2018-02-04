@@ -63,11 +63,13 @@ class AI
         preg_match_all($re, $text, $matches, PREG_SET_ORDER, 0);
         if (!empty($matches)) {
             array_push($result, 'TH');
+            
         }
-        else {
+        $en = '/[a-zA-Z]+/u';
+        preg_match_all($en, $text, $matches, PREG_SET_ORDER, 0);
+        if (!empty($matches)) {
             array_push($result, 'EN');
         }
-        
         return $result;
        // return ['TH', 'EN'];
     }
